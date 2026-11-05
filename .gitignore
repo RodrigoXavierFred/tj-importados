@@ -19,6 +19,7 @@
 /tmp/
 /Referencias/
 /outputs/
+/.openai/
 
 # production
 /build
