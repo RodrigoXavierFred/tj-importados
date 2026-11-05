@@ -13,6 +13,12 @@ type CropStyle = CSSProperties & {
 export function ProductVisual({ product, priority = false }: { product: Product; priority?: boolean }) {
   const alt = `${product.brand} ${product.name}`;
 
+  if (product.image.includes("/catalogo-compartilhado/studio/")) {
+    return <div className="product-visual product-visual-studio">
+      <Image src={product.image} alt={alt} width={product.imageWidth} height={product.imageHeight} sizes="(max-width: 760px) 46vw, 340px" priority={priority} />
+    </div>;
+  }
+
   if (!product.imageCrop) {
     return <div className="product-visual product-visual-clean">
       <Image src={product.image} alt={alt} width={product.imageWidth} height={product.imageHeight} sizes="(max-width: 760px) 42vw, 320px" priority={priority} />
