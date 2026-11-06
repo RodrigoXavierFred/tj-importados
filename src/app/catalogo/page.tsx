@@ -8,7 +8,7 @@ import { Icon } from "@/components/ui/icon";
 
 export const metadata: Metadata = {
   title: "Catálogo de perfumes",
-  description: "Explore o catálogo digital da TJ Perfumes Importados.",
+  description: "Explore perfumes originais da TJ Importados, com documentação e envio rastreável para todo o Brasil.",
 };
 
 export default function CatalogPage() {
@@ -18,8 +18,8 @@ export default function CatalogPage() {
       <section className="catalog-hero catalog-share-hero"><div className="container">
         <p className="eyebrow">CATÁLOGO PARA COMPARTILHAR</p>
         <h1>Escolha com informação.<br /><em>Compre com confiança.</em></h1>
-        <div className="catalog-intro-row"><p>Uma seleção atualizada com preços, disponibilidade e detalhes úteis para decidir. As avaliações serão publicadas somente depois da confirmação da compra.</p><Link href="/#como-comprar" className="text-link">Como comprar <Icon name="arrow" /></Link></div>
-        <div className="catalog-trust"><span>Preço visível</span><span>Disponibilidade clara</span><span>Notas olfativas</span><span>Avaliação verificada</span></div>
+        <div className="catalog-intro-row"><p>Uma seleção de perfumes originais, com preços, disponibilidade e detalhes úteis para decidir. Enviamos para todo o Brasil com documentação e código de rastreamento.</p><Link href="/#como-comprar" className="text-link">Como comprar <Icon name="arrow" /></Link></div>
+        <div className="catalog-trust"><span>100% originais</span><span>Com documentação</span><span>Envio para todo o Brasil</span><span>Código de rastreamento</span><span>Preço visível</span></div>
       </div></section>
       <section className="container section catalog-section" aria-label="Perfumes do catálogo"><CatalogGrid /></section>
       <CatalogReviews />

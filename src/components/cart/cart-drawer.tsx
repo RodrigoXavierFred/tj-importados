@@ -12,7 +12,7 @@ export function CartDrawer() {
   const message = useMemo(() => {
     if (!items.length) return "";
     const products = items.map(item => `• ${item.quantity}x ${item.product.name} — ${formatPrice(item.product.priceCents * item.quantity)}`).join("\n");
-    return `Olá, TJ Perfumes! Tenho interesse nestes produtos:\n\n${products}\n\nTotal estimado: ${formatPrice(totalCents)}\n\nGostaria de confirmar a disponibilidade e a entrega.`;
+    return `Olá, TJ Perfumes! Tenho interesse nestes produtos:\n\n${products}\n\nTotal estimado: ${formatPrice(totalCents)}\n\nGostaria de confirmar a disponibilidade e calcular o envio para o meu CEP.`;
   }, [items, totalCents]);
 
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;

@@ -8,7 +8,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: { default: "TJ Importados — Sua próxima fragrância", template: "%s | TJ Importados" },
-  description: "Conheça a seleção da TJ Perfumes Importados. Atendimento próximo e entrega grátis nas cidades atendidas do Sul de Minas e Joanópolis.",
+  description: "Perfumes originais com documentação, atendimento próximo, entrega local e envio rastreável para todo o Brasil.",
   applicationName: store.name,
   icons: { icon: "/tj/logo.png" },
   // Liberar a indexação somente quando os dados comerciais forem confirmados.

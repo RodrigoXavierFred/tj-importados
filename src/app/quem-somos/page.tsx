@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 const pillars = [
   { number: "01", title: "Curadoria com intenção", text: "Selecionamos fragrâncias árabes e importadas com personalidade, presença e uma história para contar." },
   { number: "02", title: "Atendimento próximo", text: "A escolha acontece com conversa, escuta e orientação para encontrar um perfume que combine com você." },
-  { number: "03", title: "Confiança em cada detalhe", text: "Apresentamos informações claras sobre perfil, notas, disponibilidade e valores antes da confirmação." },
-  { number: "04", title: "Entrega que aproxima", text: "Levamos a experiência até as cidades atendidas e combinamos cada entrega diretamente com o cliente." },
+  { number: "03", title: "Originalidade comprovada", text: "Trabalhamos com perfumes originais, acompanhados da documentação correspondente para uma compra segura." },
+  { number: "04", title: "Do local ao Brasil inteiro", text: "Oferecemos entrega gratuita nas cidades atendidas e envio rastreável para qualquer região do país." },
 ];
 
 export default function AboutPage() {
@@ -36,7 +36,7 @@ export default function AboutPage() {
 
       <section className="about-intro container">
         <div className="about-intro-heading"><p className="eyebrow">NOSSA ESSÊNCIA</p><h2>Perfumes que aproximam pessoas.</h2></div>
-        <div className="about-intro-copy"><p>A TJ nasceu do desejo de tornar o universo da perfumaria importada mais próximo, simples e acolhedor. Não queremos apenas apresentar frascos: queremos entender gostos, momentos e a impressão que cada cliente deseja deixar.</p><p>Atendemos Joanópolis, Sul de Minas e região com uma experiência pessoal — da primeira descoberta até a entrega.</p></div>
+        <div className="about-intro-copy"><p>A TJ nasceu do desejo de tornar o universo da perfumaria importada mais próximo, simples e acolhedor. Não queremos apenas apresentar frascos: queremos entender gostos, momentos e a impressão que cada cliente deseja deixar.</p><p>Atendemos pessoalmente Joanópolis, Sul de Minas e região, além de enviarmos perfumes originais para todo o Brasil com documentação e código de rastreamento.</p></div>
       </section>
 
       <section className="about-pillars"><div className="container">
@@ -49,7 +49,7 @@ export default function AboutPage() {
           <Image src="/tj/hero-perfumes-v3.webp" alt="Frascos de Asad, Yara e Khamrah" fill sizes="(max-width: 760px) 100vw, 50vw" />
           <span>FRAGRÂNCIAS QUE CONTAM HISTÓRIAS</span>
         </div>
-        <div className="about-regions-copy"><p className="eyebrow">PERTO DE VOCÊ</p><h2>Levamos até sua casa. Você escolhe com calma.</h2><p>As entregas são combinadas diretamente com a TJ nas cidades atendidas. Assim, você confirma disponibilidade, prazo e recebe orientação antes de decidir.</p><ul>{store.cities.map(city => <li key={`${city.name}-${city.state}`}><span>{city.state}</span>{city.name}</li>)}</ul><Link href="/#entregas" className="text-link">Ver informações de entrega <Icon name="arrow" /></Link></div>
+        <div className="about-regions-copy"><p className="eyebrow">ENTREGA LOCAL E ENVIO NACIONAL</p><h2>Levamos até sua casa, em todo o Brasil.</h2><p>Nas cidades atendidas, a entrega local é gratuita. Para as demais regiões do país, calculamos o frete pelo CEP e enviamos com código ou ID de rastreamento.</p><ul>{store.cities.map(city => <li key={`${city.name}-${city.state}`}><span>{city.state}</span>{city.name}</li>)}</ul><Link href="/#entregas" className="text-link">Ver informações de entrega <Icon name="arrow" /></Link></div>
       </section>
 
       <section className="story-cta"><div className="container"><div><p className="eyebrow">SUA PRÓXIMA HISTÓRIA</p><h2>Qual perfume vai marcar este momento?</h2></div><Link href="/catalogo" className="button button-gold">Explorar catálogo <Icon name="arrow" /></Link></div></section>
