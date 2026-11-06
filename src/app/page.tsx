@@ -4,6 +4,7 @@ import { Hero } from "@/components/home/hero";
 import { ProductShowcase } from "@/components/home/product-showcase";
 import { StoreInformation } from "@/components/home/store-information";
 import { BestSellersCarousel } from "@/components/home/best-sellers-carousel";
+import { EditorialGuides } from "@/components/home/editorial-guides";
 
 export default function HomePage() {
   return <>
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <ProductShowcase />
       <BestSellersCarousel />
+      <EditorialGuides />
       <StoreInformation />
     </main>
     <SiteFooter />

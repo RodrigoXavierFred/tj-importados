@@ -14,9 +14,9 @@ export const store = {
 
 export const navigation = [
   { label: "Início", href: "/#inicio" },
-  { label: "Destaques", href: "/#perfumes" },
+  { label: "Quem somos", href: "/quem-somos" },
+  { label: "Perfumes árabes", href: "/perfumes-arabes" },
   { label: "Catálogo", href: "/catalogo" },
   { label: "Todos os perfumes", href: "/catalogo-completo" },
-  { label: "Como comprar", href: "/#como-comprar" },
   { label: "Entregas", href: "/#entregas" },
 ] as const;
