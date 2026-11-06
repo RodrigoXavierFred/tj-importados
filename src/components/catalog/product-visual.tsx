@@ -10,8 +10,22 @@ type CropStyle = CSSProperties & {
   "--crop-top"?: string;
 };
 
-export function ProductVisual({ product, priority = false }: { product: Product; priority?: boolean }) {
+export function ProductVisual({ product, priority = false, variant = "card" }: { product: Product; priority?: boolean; variant?: "card" | "modal" }) {
   const alt = `${product.brand} ${product.name}`;
+  const modalImage = variant === "modal" ? product.modalImage : undefined;
+
+  if (modalImage) {
+    return <div className="product-visual product-visual-clean product-visual-modal-clean">
+      <Image
+        src={modalImage}
+        alt={alt}
+        width={product.modalImageWidth ?? product.imageWidth}
+        height={product.modalImageHeight ?? product.imageHeight}
+        sizes="(max-width: 760px) 58vw, 380px"
+        priority={priority}
+      />
+    </div>;
+  }
 
   if (product.image.includes("/catalogo-compartilhado/studio/")) {
     return <div className="product-visual product-visual-studio">

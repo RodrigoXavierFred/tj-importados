@@ -5,8 +5,8 @@ import type { CSSProperties } from "react";
 import { useState } from "react";
 
 const sprayDrops = Array.from({ length: 18 }, (_, index) => ({
-  angle: 198 + index * 2.25,
-  distance: 105 + (index % 6) * 16,
+  angle: 139 + index * 0.9,
+  distance: 130 + (index % 6) * 19,
   delay: (index % 6) * 24,
   size: 3 + (index % 3),
 }));

@@ -10,6 +10,9 @@ export type Product = {
   image: string;
   imageWidth: number;
   imageHeight: number;
+  modalImage?: string;
+  modalImageWidth?: number;
+  modalImageHeight?: number;
   category: "Feminino" | "Masculino" | "Unissex";
   family: string;
   notes: string[];
@@ -30,6 +33,7 @@ export const demoProducts: Product[] = [
     concentration: "Eau de Parfum", priceCents: 30990, availability: "ready",
     description: "Intenso, ambarado e envolvente.",
     image: "/tj/catalogo-compartilhado/studio/asad.webp", imageWidth: 1024, imageHeight: 1280,
+    modalImage: "/tj/asad.png", modalImageWidth: 184, modalImageHeight: 370,
     category: "Masculino", family: "Âmbar especiado", notes: ["Pimenta preta", "Tabaco", "Café", "Baunilha"],
     catalogDescription: "Uma fragrância intensa e sofisticada, com especiarias vibrantes, nuances ambaradas e fundo quente e cremoso. Pimenta preta, tabaco e café encontram baunilha e âmbar em uma assinatura poderosa e envolvente.",
     traits: ["Intenso", "Quente", "Sofisticado", "Noturno", "Poderoso"], catalogPage: 10, featured: true, bestSeller: true,
@@ -39,6 +43,7 @@ export const demoProducts: Product[] = [
     concentration: "Eau de Parfum", priceCents: 31990, availability: "order",
     description: "Doce, cremosa e delicadamente envolvente.",
     image: "/tj/catalogo-compartilhado/studio/yara.webp", imageWidth: 1024, imageHeight: 1280,
+    modalImage: "/tj/yara.png", modalImageWidth: 184, modalImageHeight: 387,
     category: "Feminino", family: "Floral gourmand", notes: ["Tangerina", "Orquídea", "Baunilha", "Almíscar"],
     catalogDescription: "Uma fragrância feminina doce e envolvente, com toque tropical cremoso e elegância delicada. Perfeita para quem ama suavidade, charme e feminilidade moderna.",
     traits: ["Doce", "Agradável", "Cremoso", "Delicado", "Charmoso", "Sofisticado"], catalogPage: 43, featured: true, bestSeller: true,
@@ -48,6 +53,7 @@ export const demoProducts: Product[] = [
     concentration: "Eau de Toilette", priceCents: 44990, availability: "order",
     description: "Cítrico, frutado e intensamente marcante.",
     image: "/tj/catalogo-compartilhado/studio/club-de-nuit-intense-man.webp", imageWidth: 1024, imageHeight: 1280,
+    modalImage: "/tj/club-de-nuit-intense-man.webp", modalImageWidth: 667, modalImageHeight: 1000,
     category: "Masculino", family: "Cítrico frutado", notes: ["Limão siciliano", "Abacaxi", "Bétula", "Baunilha"],
     catalogDescription: "Uma fragrância intensa e sofisticada, com saída cítrica frutada e fundo amadeirado envolvente. Limão, abacaxi e cassis encontram bétula, patchouli e baunilha em uma assinatura marcante e memorável.",
     traits: ["Marcante", "Elegante", "Amadeirado", "Intenso", "Noturno", "Envolvente"], catalogPage: 9, featured: true, bestSeller: true,
@@ -219,6 +225,7 @@ export const demoProducts: Product[] = [
     concentration: "Eau de Parfum", priceCents: 51990, availability: "order",
     description: "Sofisticado, vibrante e elegante.",
     image: "/tj/catalogo-compartilhado/studio/club-de-nuit-elite-v2.webp", imageWidth: 1024, imageHeight: 1280,
+    modalImage: "/tj/club-de-nuit-elite.webp", modalImageWidth: 667, modalImageHeight: 1000,
     category: "Unissex", family: "Floral frutado", notes: ["Frutas", "Flores", "Madeiras", "Almíscar"],
     catalogDescription: "Uma fragrância sofisticada com abertura vibrante, coração floral e base elegante.",
     traits: ["Sofisticado", "Elegante", "Vibrante", "Marcante"], catalogPage: 0,

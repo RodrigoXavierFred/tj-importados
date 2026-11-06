@@ -5,10 +5,12 @@ import type { Product } from "@/data/products";
 import { formatPrice } from "@/lib/format";
 import { Icon } from "@/components/ui/icon";
 import { ProductVisual } from "@/components/catalog/product-visual";
+import { useCart } from "@/components/cart/cart-context";
 
 export function ProductCard({ product }: { product: Product }) {
   const ready = product.availability === "ready";
   const modal = useRef<HTMLDialogElement>(null);
+  const { addItem, openCart } = useCart();
 
   function openModal() {
     modal.current?.showModal();
@@ -18,6 +20,12 @@ export function ProductCard({ product }: { product: Product }) {
   function closeModal() {
     modal.current?.close();
     document.body.classList.remove("modal-open");
+  }
+
+  function addToBag() {
+    addItem(product);
+    closeModal();
+    openCart();
   }
 
   return <article className="product-card" aria-labelledby={`product-${product.id}`}>
@@ -39,7 +47,7 @@ export function ProductCard({ product }: { product: Product }) {
         <button type="button" className="modal-close" aria-label="Fechar detalhes" onClick={closeModal}><Icon name="close" /></button>
         <div className="modal-visual">
           <span className="modal-page">{product.catalogPage ? `CATÁLOGO · PÁGINA ${String(product.catalogPage).padStart(2, "0")}` : "SELEÇÃO COMERCIAL TJ"}</span>
-          <ProductVisual product={product} />
+          <ProductVisual product={product} variant="modal" />
         </div>
         <div className="modal-content">
           <p className="product-brand">{product.brand}</p>
@@ -49,7 +57,7 @@ export function ProductCard({ product }: { product: Product }) {
           <div className="modal-block"><span>Notas principais</span><ul>{product.notes.map(note => <li key={note}>{note}</li>)}</ul></div>
           <div className="modal-block"><span>Perfil</span><ul>{product.traits.map(trait => <li key={trait}>{trait}</li>)}</ul></div>
           <div className="modal-review"><span aria-hidden="true">☆ ☆ ☆ ☆ ☆</span><div><strong>Ainda sem avaliações publicadas</strong><p>Notas e comentários aparecerão aqui após a confirmação da compra.</p></div></div>
-          <div className="modal-bottom"><div><span>Preço atual</span><strong>{formatPrice(product.priceCents)}</strong></div><button type="button" className="button button-gold" onClick={closeModal}>Continuar explorando</button></div>
+          <div className="modal-bottom"><div><span>Preço atual</span><strong>{formatPrice(product.priceCents)}</strong></div><button type="button" className="button button-gold modal-add" onClick={addToBag}><Icon name="bag" />Adicionar à sacola</button></div>
         </div>
       </div>
     </dialog>
