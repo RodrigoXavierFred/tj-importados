@@ -15,7 +15,8 @@ export function ProductVisual({ product, priority = false }: { product: Product;
 
   if (product.image.includes("/catalogo-compartilhado/studio/")) {
     return <div className="product-visual product-visual-studio">
-      <Image src={product.image} alt={alt} width={product.imageWidth} height={product.imageHeight} sizes="(max-width: 760px) 46vw, 340px" priority={priority} />
+      <Image className="studio-backdrop" src={product.image} alt="" aria-hidden="true" width={product.imageWidth} height={product.imageHeight} sizes="(max-width: 760px) 46vw, 340px" priority={priority} />
+      <Image className="studio-product" src={product.image} alt={alt} width={product.imageWidth} height={product.imageHeight} sizes="(max-width: 760px) 46vw, 340px" priority={priority} />
     </div>;
   }
 
