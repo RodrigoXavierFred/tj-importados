@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ProductVisual } from "@/components/catalog/product-visual";
 import { useMemo } from "react";
 import { useCart } from "@/components/cart/cart-context";
 import { Icon } from "@/components/ui/icon";
@@ -29,7 +30,7 @@ export function CartDrawer() {
       {!items.length ? <div className="cart-empty"><Icon name="bag" /><h3>Sua sacola está vazia</h3><p>Abra um perfume, veja os detalhes e adicione os seus favoritos aqui.</p><button type="button" className="button button-gold" onClick={closeCart}>Continuar escolhendo</button></div> : <>
         <div className="cart-items">
           {items.map(({ product, quantity }) => <article className="cart-item" key={product.id}>
-            <div className="cart-item-image"><Image src={product.modalImage ?? product.image} alt={`${product.brand} ${product.name}`} width={product.modalImageWidth ?? product.imageWidth} height={product.modalImageHeight ?? product.imageHeight} /></div>
+            <div className="cart-item-image">{product.imageCrop ? <ProductVisual product={product} /> : <Image src={product.modalImage ?? product.image} alt={`${product.brand} ${product.name}`} width={product.modalImageWidth ?? product.imageWidth} height={product.modalImageHeight ?? product.imageHeight} />}</div>
             <div className="cart-item-copy"><span>{product.brand}</span><h3>{product.name}</h3><strong>{formatPrice(product.priceCents)}</strong>
               <div className="cart-quantity"><button type="button" aria-label={`Diminuir quantidade de ${product.name}`} onClick={() => updateQuantity(product.id, quantity - 1)}>−</button><b>{quantity}</b><button type="button" aria-label={`Aumentar quantidade de ${product.name}`} onClick={() => updateQuantity(product.id, quantity + 1)}>+</button></div>
             </div>

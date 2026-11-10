@@ -114,7 +114,7 @@ export const demoProducts: Product[] = [
   },
   {
     id: "luminus", name: "Luminus", brand: "Lattafa", volumeMl: 100,
-    concentration: "Eau de Parfum", priceCents: 31990, availability: "order",
+    concentration: "Eau de Parfum", priceCents: 34000, availability: "order",
     description: "Fresco, luminoso e floral frutado.",
     image: "/tj/catalogo-compartilhado/studio/luminus.webp", imageWidth: 1024, imageHeight: 1280,
     category: "Feminino", family: "Floral frutado", notes: ["Frutas", "Flores", "Madeiras", "Almíscar"],
@@ -204,7 +204,7 @@ export const demoProducts: Product[] = [
   },
   {
     id: "spectrum", name: "Spectrum", brand: "Maison Alhambra", volumeMl: 100,
-    concentration: "Eau de Parfum", priceCents: 39990, availability: "order",
+    concentration: "Eau de Parfum", priceCents: 37990, availability: "order",
     description: "Sofisticado, elegante e de longa duração.",
     image: "/tj/catalogo-compartilhado/studio/spectrum.webp", imageWidth: 1024, imageHeight: 1280,
     category: "Masculino", family: "Amadeirado aromático", notes: ["Aromáticos", "Especiarias", "Madeiras", "Âmbar"],
@@ -247,6 +247,16 @@ export const demoProducts: Product[] = [
     category: "Masculino", family: "Kit âmbar especiado", notes: ["Perfume", "Spray", "Gel de banho", "Asad"],
     catalogDescription: "Kit completo Asad com Eau de Parfum, spray perfumado e gel de banho para prolongar a experiência da fragrância.",
     traits: ["Kit", "Completo", "Presenteável", "Masculino"], catalogPage: 0,
+  },
+  {
+    id: "moda-is-my-idole", name: "Kit Moda Is My Idôle", brand: "Privé", volumeMl: 200,
+    presentation: "Hidratante 200 ml + body splash 200 ml", concentration: "Kit perfumado", priceCents: 14990, availability: "order",
+    description: "Um ritual de cuidado e perfumação em dois passos.",
+    image: "/tj/promotions-kits.png", imageWidth: 1586, imageHeight: 992,
+    imageCrop: { x: 0, y: 0, width: 793, height: 992 },
+    category: "Feminino", family: "Kit de cuidados", notes: ["Hidratante", "Body splash"],
+    catalogDescription: "Kit com creme hidratante e body splash Moda Is My Idôle, da Privé. Uma combinação para cuidar da pele e perfumar o dia.",
+    traits: ["Kit", "Presenteável", "Cuidado diário"], catalogPage: 0,
   },
 ];
 

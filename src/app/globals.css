@@ -991,3 +991,34 @@ h2 { font-size: clamp(32px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -.5
   .promotion-price { margin: 18px 0; }
   .promotion-copy .button { width: 100%; }
 }
+
+.black-friday-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin: 12px 0 24px; }
+.black-friday-heading .eyebrow { color: #e8c378; margin-bottom: 8px; }
+.black-friday-heading h1 { font-size: clamp(38px, 6vw, 76px); font-weight: 800; line-height: .95; letter-spacing: -2px; color: #fff0d4; }
+.black-friday-heading h1 em { color: #e7b85e; font-style: normal; }
+.black-friday-heading > p { color: #bbad98; text-align: right; font-size: 12px; line-height: 1.7; }
+.promotion-banner { background: radial-gradient(ellipse at 100% 0, var(--promotion-accent), transparent 80%), #171019; }
+.promotion-copy h2 { font-family: var(--font-tj-serif); font-weight: 400; font-size: clamp(38px, 4vw, 58px); line-height: 1.04; letter-spacing: -1px; color: #ffe0a0; }
+.promotion-kit { position: absolute; inset: 0; background-image: url('/tj/promotions-kits.png'); background-size: 200% 100%; }
+.promotion-kit-left { background-position: left center; }
+.promotion-kit-right { background-position: right center; }
+.promotion-consult { margin: 25px 0; color: #ffe0a0; font-size: 18px; }
+.promotion-navigation { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 18px; }
+.promotion-navigation > button { min-height: 44px; min-width: 44px; padding: 8px 12px; border: 1px solid #6d5532; border-radius: 24px; color: #f1d399; background: #171310; cursor: pointer; }
+.promotion-navigation > span { font-size: 11px; color: #c8b994; }
+.promotion-dots { display: flex; align-items: center; gap: 4px; }
+.promotion-dots button { position: relative; width: 28px; height: 44px; background: transparent; border: 0; cursor: pointer; }
+.promotion-dots button::after { content: ''; position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #65573f; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.promotion-dots button[aria-current]::after { background: #f3cb80; width: 19px; border-radius: 5px; }
+.promotion-navigation button:focus-visible { outline: 2px solid #ffe0a0; outline-offset: 3px; }
+.cart-item-image .product-visual-poster { width: 100%; height: 100%; margin: 0; }
+@media (max-width: 760px) {
+  .black-friday-heading { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+  .black-friday-heading > p { text-align: left; font-size: 11px; }
+  .promotion-copy h2 { font-size: 38px; }
+  .promotion-art { height: 330px; }
+  .promotion-navigation { gap: 4px; flex-wrap: wrap; }
+  .promotion-dots button { width: 26px; }
+  .promotion-navigation > span { margin: 0 8px; }
+  .promotion-navigation > button:last-child { font-size: 10px; padding: 8px; }
+}
