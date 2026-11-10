@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import { useCart } from "@/components/cart/cart-context";
 import { Icon } from "@/components/ui/icon";
 import { formatPrice } from "@/lib/format";
+import { store } from "@/config/store";
 
 export function CartDrawer() {
   const { items, itemCount, totalCents, isOpen, closeCart, removeItem, updateQuantity } = useCart();
@@ -15,7 +16,7 @@ export function CartDrawer() {
     return `Olá, TJ Perfumes! Tenho interesse nestes produtos:\n\n${products}\n\nTotal estimado: ${formatPrice(totalCents)}\n\nGostaria de confirmar a disponibilidade e calcular o envio para o meu CEP.`;
   }, [items, totalCents]);
 
-  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${store.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return <>
     <button type="button" className={`cart-backdrop ${isOpen ? "is-open" : ""}`} aria-label="Fechar sacola" onClick={closeCart} tabIndex={isOpen ? 0 : -1} />
