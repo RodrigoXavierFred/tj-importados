@@ -957,3 +957,37 @@ h2 { font-size: clamp(32px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -.5
 
 .editorial-card-about { background: radial-gradient(ellipse at 65% 25%, #27433680, transparent 65%), #101513; }
 .editorial-card > img.editorial-about-bottle { object-fit: contain; width: 70% !important; height: 55% !important; inset: 20px 4% auto auto !important; object-position: center top; }
+
+/* Campanha promocional do catálogo */
+.catalog-promotions { padding-top: 28px; }
+.promotion-banner { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border: 1px solid #735433; border-radius: 20px; background: radial-gradient(ellipse at 100% 0, #5c285d55, transparent 65%), #171019; }
+.promotion-art { position: relative; min-height: 550px; background: #281128; }
+.promotion-art img { object-fit: cover; object-position: center; }
+.promotion-tag { position: absolute; top: 22px; left: 22px; padding: 10px 15px; border: 1px solid #d3ae6b80; border-radius: 30px; background: #1a0c21e6; color: #f5d391; font-size: 10px; letter-spacing: 1.8px; }
+.promotion-copy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 44px 48px; }
+.promotion-copy h1 { font-family: var(--font-tj-serif); font-weight: 400; font-size: clamp(44px, 5vw, 70px); line-height: 1; letter-spacing: -1px; }
+.promotion-copy h1 em { color: var(--gold-light); }
+.promotion-brand { margin-top: 24px; color: #e9c884; font-size: 13px; letter-spacing: 2px; }
+.promotion-description { margin-top: 14px; max-width: 380px; color: #c8bac8; font-size: 13px; line-height: 1.8; }
+.promotion-price { display: flex; flex-direction: column; gap: 6px; margin: 24px 0; }
+.promotion-price > span { color: #bdaeb9; font-size: 13px; }
+.promotion-price strong { color: #ffe0a0; font-size: clamp(36px, 4vw, 51px); font-weight: 500; line-height: 1.15; }
+.promotion-price small { font-size: 15px; font-weight: 400; }
+.promotion-price b { color: #d7b5df; font-size: 11px; font-weight: 400; }
+.promotion-browse { margin-top: 20px; color: #c7b7c6; font-size: 11px; }
+.promotion-browse span { padding-left: 10px; color: var(--gold-light); }
+#produtos-catalogo { scroll-margin-top: 110px; }
+@media (max-width: 760px) {
+  .catalog-promotions { padding-top: 18px; }
+  .promotion-banner { grid-template-columns: 1fr; border-radius: 14px; }
+  .promotion-art { min-height: 0; height: 300px; }
+  .promotion-art img { object-position: center 52%; }
+  .promotion-tag { top: 14px; left: 14px; padding: 8px 12px; font-size: 8px; }
+  .promotion-copy { padding: 27px 24px 30px; }
+  .promotion-copy .eyebrow { font-size: 8px; }
+  .promotion-copy h1 { font-size: 44px; }
+  .promotion-brand { margin-top: 18px; font-size: 11px; }
+  .promotion-description { font-size: 12px; }
+  .promotion-price { margin: 18px 0; }
+  .promotion-copy .button { width: 100%; }
+}

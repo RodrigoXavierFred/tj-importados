@@ -26,7 +26,6 @@ export function SiteHeader() {
 
   return <>
     <a href="#conteudo" className="skip-link">Pular para o conteúdo</a>
-    <div className="delivery-bar"><Icon name="delivery" /><span>Entrega grátis nas cidades atendidas</span></div>
     <header className="site-header">
       <div className="header-inner">
         <Link href="/#inicio" className="brand" aria-label={`${store.name} — início`} onClick={() => setMenuOpen(false)}>

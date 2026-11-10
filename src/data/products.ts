@@ -213,7 +213,7 @@ export const demoProducts: Product[] = [
   },
   {
     id: "lily", name: "Lily", brand: "Maison Asrar", volumeMl: 100,
-    concentration: "Eau de Parfum", priceCents: 48990, availability: "order",
+    concentration: "Eau de Parfum", priceCents: 44000, availability: "order",
     description: "Floral frutado, delicado e encantador.",
     image: "/tj/catalogo-compartilhado/studio/lily.webp", imageWidth: 1024, imageHeight: 1280,
     category: "Feminino", family: "Floral frutado", notes: ["Flores", "Frutas", "Baunilha", "Almíscar"],
