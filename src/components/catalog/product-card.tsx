@@ -39,14 +39,12 @@ export function ProductCard({ product }: { product: Product }) {
       <p className="card-meta">{product.concentration} · {product.presentation ?? `${product.volumeMl} ml`}</p>
       <p className="card-family">{product.category} · {product.family}</p>
       <p className="card-price">{formatPrice(product.priceCents)}</p>
-      <p className="card-review"><span aria-hidden="true">☆</span> Avaliações verificadas em breve</p>
       <button type="button" className="product-open" onClick={openModal}>Conhecer perfume <Icon name="plus" /></button>
     </div>
     <dialog ref={modal} className="product-modal" onClose={() => document.body.classList.remove("modal-open")} onClick={event => { if (event.target === event.currentTarget) closeModal(); }}>
       <div className="product-modal-panel">
         <button type="button" className="modal-close" aria-label="Fechar detalhes" onClick={closeModal}><Icon name="close" /></button>
         <div className="modal-visual">
-          <span className="modal-page">{product.catalogPage ? `CATÁLOGO · PÁGINA ${String(product.catalogPage).padStart(2, "0")}` : "SELEÇÃO COMERCIAL TJ"}</span>
           <ProductVisual product={product} variant="modal" />
         </div>
         <div className="modal-content">
@@ -56,7 +54,6 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="modal-description">{product.catalogDescription}</p>
           <div className="modal-block"><span>Notas principais</span><ul>{product.notes.map(note => <li key={note}>{note}</li>)}</ul></div>
           <div className="modal-block"><span>Perfil</span><ul>{product.traits.map(trait => <li key={trait}>{trait}</li>)}</ul></div>
-          <div className="modal-review"><span aria-hidden="true">☆ ☆ ☆ ☆ ☆</span><div><strong>Ainda sem avaliações publicadas</strong><p>Notas e comentários aparecerão aqui após a confirmação da compra.</p></div></div>
           <div className="modal-bottom"><div><span>Preço atual</span><strong>{formatPrice(product.priceCents)}</strong></div><button type="button" className="button button-gold modal-add" onClick={addToBag}><Icon name="bag" />Adicionar à sacola</button></div>
         </div>
       </div>

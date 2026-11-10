@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CatalogGrid } from "@/components/catalog/catalog-grid";
-import { CatalogReviews } from "@/components/catalog/catalog-reviews";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Icon } from "@/components/ui/icon";
@@ -22,7 +21,6 @@ export default function CatalogPage() {
         <div className="catalog-trust"><span>100% originais</span><span>Com documentação</span><span>Envio para todo o Brasil</span><span>Código de rastreamento</span><span>Preço visível</span></div>
       </div></section>
       <section className="container section catalog-section" aria-label="Perfumes do catálogo"><CatalogGrid /></section>
-      <CatalogReviews />
       <section className="catalog-cta"><div className="container"><div><p className="eyebrow">PRECISA DE AJUDA?</p><h2>A escolha certa começa com uma conversa.</h2></div><Link href="/#como-comprar" className="button button-gold">Falar com a TJ <Icon name="arrow" /></Link></div></section>
     </main>
     <SiteFooter />

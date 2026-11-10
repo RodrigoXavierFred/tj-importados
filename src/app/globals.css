@@ -769,10 +769,10 @@ h2 { font-size: clamp(32px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -.5
 .guide-orbit-one { width: 340px; height: 340px; right: -35px; top: -40px; }
 .guide-orbit-two { width: 220px; height: 220px; right: 30px; top: 25px; }
 .editorial-card .guide-bottle { position: absolute; z-index: 1; width: auto; object-fit: contain; filter: drop-shadow(12px 20px 18px #000c); transition: transform .6s cubic-bezier(.2,.8,.2,1); }
-.guide-bottle-asad { right: 175px; top: 55px; height: 270px; transform: rotate(-4deg); }
-.guide-bottle-yara { right: 45px; top: 38px; height: 292px; transform: rotate(4deg); }
-.editorial-card-guide:hover .guide-bottle-asad { transform: rotate(-6deg) translateY(-8px); }
-.editorial-card-guide:hover .guide-bottle-yara { transform: rotate(6deg) translateY(-12px); }
+.guide-bottle-oud { right: 175px; top: 55px; height: 270px; transform: rotate(-4deg); }
+.guide-bottle-khamrah { right: 45px; top: 38px; height: 292px; transform: rotate(4deg); }
+.editorial-card-guide:hover .guide-bottle-oud { transform: rotate(-6deg) translateY(-8px); }
+.editorial-card-guide:hover .guide-bottle-khamrah { transform: rotate(6deg) translateY(-12px); }
 
 /* Quem somos */
 .about-hero { position: relative; display: flex; align-items: center; min-height: 720px; overflow: hidden; border-bottom: 1px solid #493a26; isolation: isolate; }
@@ -886,8 +886,8 @@ h2 { font-size: clamp(32px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -.5
   .editorial-card { min-height: 430px; padding: 25px 22px; border-radius: 12px; }
   .editorial-card h3 { font-size: 40px; }
   .editorial-card p { font-size: 12px; }
-  .guide-bottle-asad { right: 135px; top: 48px; height: 245px; }
-  .guide-bottle-yara { right: 23px; top: 35px; height: 265px; }
+  .guide-bottle-oud { right: 135px; top: 48px; height: 245px; }
+  .guide-bottle-khamrah { right: 23px; top: 35px; height: 265px; }
 
   .about-hero { min-height: 690px; align-items: flex-end; }
   .about-hero-image { object-position: 62% center; }
@@ -954,3 +954,6 @@ h2 { font-size: clamp(32px, 3.4vw, 46px); line-height: 1.12; letter-spacing: -.5
   .wear-guide-card h3 { font-size: 34px; }
   .wear-guide-card > span { font-size: 12px; }
 }
+
+.editorial-card-about { background: radial-gradient(ellipse at 65% 25%, #27433680, transparent 65%), #101513; }
+.editorial-card > img.editorial-about-bottle { object-fit: contain; width: 70% !important; height: 55% !important; inset: 20px 4% auto auto !important; object-position: center top; }
