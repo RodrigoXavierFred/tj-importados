@@ -4,6 +4,7 @@ export const store = {
   fullName: "TJ Perfumes Importados",
   description: "Perfumes que fazem parte da sua história.",
   domain: "tjimportados.com.br",
+  whatsappNumber: "5511998615057",
   cities: [
     { name: "Santa Rita do Sapucaí", state: "MG" },
     { name: "Extrema", state: "MG" },
