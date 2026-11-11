@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState, type CSSProperties } from "react";
 import { demoProducts } from "@/data/products";
 import { promotions } from "@/data/promotions";
+import { campaign } from "@/config/campaign";
 import { store } from "@/config/store";
 import { useCart } from "@/components/cart/cart-context";
 import { Icon } from "@/components/ui/icon";
@@ -27,12 +28,12 @@ export function CatalogPromotions() {
   const select = (index: number) => { setActive(index); setPlaying(false); };
 
   return <section className="catalog-promotions container" aria-labelledby="promotions-title">
-    <div className="black-friday-heading"><div><p className="eyebrow">O ESQUENTA JÁ COMEÇOU</p><h1 id="promotions-title">BLACK <em>FRIDAY</em></h1></div><p>Ofertas especiais.<br />Sua próxima fragrância está aqui.</p></div>
-    <div className="promotion-carousel" role="region" aria-roledescription="carrossel" aria-label="Ofertas e novidades da Black Friday" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onFocusCapture={() => setPlaying(false)}>
+    <div className="black-friday-heading"><div><p className="eyebrow">{campaign?.eyebrow ?? "SELEÇÃO TJ IMPORTADOS"}</p><h1 id="promotions-title">{campaign?.title ?? "OFERTAS"} <em>{campaign?.highlight ?? "ESPECIAIS"}</em></h1></div><p>{campaign?.description ?? "Descubra sua próxima fragrância."}</p></div>
+    <div className="promotion-carousel" role="region" aria-roledescription="carrossel" aria-label={`Ofertas e novidades${campaign ? ` · ${campaign.label}` : ""}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onFocusCapture={() => setPlaying(false)}>
       <div className="promotion-banner" style={{ "--promotion-accent": offer.accent } as CSSProperties} role="group" aria-roledescription="slide" aria-label={`${active + 1} de ${promotions.length}: ${offer.name}`}>
         <div className="promotion-art">
           {panel ? <div className={`promotion-kit promotion-kit-${panel}`} role="img" aria-label={offer.name} /> : product && <Image src={product.image} alt={`${offer.name} · ${offer.brand}`} fill priority sizes="(max-width: 760px) 100vw, 50vw" />}
-          <span className="promotion-tag">{product ? "ESQUENTA BLACK FRIDAY" : "NOVIDADE EXCLUSIVA"}</span>
+          <span className="promotion-tag">{product ? campaign?.label ?? "OFERTA ESPECIAL" : "NOVIDADE EXCLUSIVA"}</span>
         </div>
         <div className="promotion-copy">
           <p className="eyebrow">{offer.brand}</p>

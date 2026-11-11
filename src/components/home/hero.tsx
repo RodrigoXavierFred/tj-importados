@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { campaign } from "@/config/campaign";
 import type { CSSProperties } from "react";
 import { useState } from "react";
 
@@ -24,9 +26,10 @@ export function Hero() {
       className="hero-campaign"
     />
     <div className="hero-shade" />
-    <div className="hero-message">
+    <div className="hero-message" style={campaign ? { "--campaign-accent": campaign.accent } as CSSProperties : undefined}>
       <p className="eyebrow">UMA PRESENÇA INESQUECÍVEL</p>
       <h1 id="hero-title">Antes da palavra,<br /><em>fica a essência.</em></h1>
+      {campaign && <Link href={campaign.href} className="hero-seasonal"><span>{campaign.label}</span><small>{campaign.homeMessage}</small><b>{campaign.action} <span aria-hidden="true">↗</span></b></Link>}
     </div>
     <div className="hero-spray-control">
       <button type="button" onClick={() => setSpray(value => value + 1)} aria-label="Borrifar perfume Asad em direção à frase">

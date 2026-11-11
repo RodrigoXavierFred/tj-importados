@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Campanhas sazonais
+
+Em `src/config/campaign.ts`, altere `activeCampaign` para `"black-friday"`,
+`"christmas"` ou `null` (sem campanha). Os presets permitem editar os textos,
+link e cor do destaque no início, além dos títulos e etiquetas do catálogo.
+Os produtos e descontos são independentes: revise `src/data/promotions.ts` e os
+preços em `src/data/products.ts` antes de mudar a campanha. Execute `npm run build`
+e publique a nova versão para aplicar as alterações.
+
+O ícone e a prévia de compartilhamento usam a marca com fundo preto em
+`src/app/icon.png` e `public/tj/logo-black.png`, com metadados em `src/app/layout.tsx`.
