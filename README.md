@@ -46,3 +46,11 @@ e publique a nova versão para aplicar as alterações.
 
 O ícone e a prévia de compartilhamento usam a marca com fundo preto em
 `src/app/icon.png` e `public/tj/logo-black.png`, com metadados em `src/app/layout.tsx`.
+
+## Segurança
+
+A revisão, limitações e ações pendentes de domínio/Render estão em
+[`docs/security-review.md`](docs/security-review.md).
+Execute `node --test tests/cart-storage.test.mjs` com Node 24 para verificar a
+restauração e validação da sacola. Preços continuam sujeitos à conferência pela loja
+no WhatsApp; não há checkout nem validação de pedido no servidor.
